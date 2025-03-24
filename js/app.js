@@ -1,6 +1,5 @@
 const alunos = [
     {
-    _id: 0,
     nome: "chico melato",
     notas: {
         backend_1: [7, 8.5, 9, 6.5],
@@ -10,7 +9,6 @@ const alunos = [
     },
     },
     {
-    _id: 1,
     nome: "talita lima",
     notas: {
         backend_1: [4, 4, 4, 4],
@@ -20,7 +18,6 @@ const alunos = [
     },
     },
     {
-    _id: 2,
     nome: "fulano de tal",
     notas: {
         backend_1: [4, 8, 10, 4],
