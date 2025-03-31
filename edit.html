@@ -101,7 +101,7 @@
               class="validate"
             />
           </div>
-         
+        
           <div class="input-field col s4">
             <button class="btn" type="submit" name="action">
                 Cadastrar
@@ -139,8 +139,15 @@
       ];
       const alunoService = new AlunoService();
       alunos.forEach((aluno) => {
-        alunoService.add(aluno);
+        alunoService.add(new AlunoMode(aluno));
       });
+      const paramsString = window.location.search;
+      console.log(paramsString);
+      const URLParams = new URLSearchParams(paramsString);
+      const alunoId =  parseInt(URLParams.get("id"));
+      console.log(alunoId);
+      let aluno = alunoService.searchById(alunoId);
+      console.log(aluno);
 
     </script>
   </body>

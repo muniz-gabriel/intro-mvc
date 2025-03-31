@@ -1,37 +1,7 @@
-const alunos = [
-    {
-    nome: "chico melato",
-    notas: {
-        backend_1: [7, 8.5, 9, 6.5],
-        frontend_2: [2, 2, 2, 2],
-        bancodados: [2, 2, 3, 3],
-        ferramentas: [3, 3, 3, 3],
-    },
-    },
-    {
-    nome: "talita lima",
-    notas: {
-        backend_1: [4, 4, 4, 4],
-        frontend_2: [4, 4, 5, 5],
-        bancodados: [5, 5, 6, 6],
-        ferramentas: [7, 7, 8, 9],
-    },
-    },
-    {
-    nome: "fulano de tal",
-    notas: {
-        backend_1: [4, 8, 10, 4],
-        frontend_2: [4, 8, 5, 5],
-        bancodados: [5, 8, 6, 6],
-        ferramentas: [7, 7, 8, 9],
-    },
-    },
-    ];
+const alunoService = new Alunoservice()
 
-    const alunoService = new Alunoservice()
-
-alunos.forEach(aluno => {
-    alunoService.addAluno(new AlunoModel(aluno))
+    alunos.forEach(aluno => {
+        alunoService.add(new AlunoModel(aluno))
 })
 
 const alunoView = new AlunoView(document.querySelector('[data-table="alunos"]'))

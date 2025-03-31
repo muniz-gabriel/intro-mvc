@@ -10,3 +10,4 @@ class AlunoController {
         this.view.render(this.service.alunos)
     }
 }
+
