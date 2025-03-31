@@ -1,27 +1,27 @@
 class Alunoservice {
     constructor() {
-        this.alunos = []
+        this.alunos = [];
     }
 
-    addAluno(aluno) {
+    add(aluno) {
         if (!aluno instanceof AlunoModel) {
             throw new Error('O aluno deve ser uma instância de AlunoModel')
-        }
-        this.alunos.push(aluno)
-    }
+        };
+        this.alunos.push(aluno);
+    };
 
     update(aluno) {
         return aluno
-    }
+    };
 
     searchById(id) {
         return this.alunos.find(aluno => aluno._id == id)
-    }
+    };
 
     updateLocalStorage() {
         let alunos = JSON.stringify(this.alunos)
         localStorage.setItem('alunos', alunos)  
-    }
+    };
 
     updateListAlunosFromLocalStorage() {
         let local = localStorage.getItem('alunos')
@@ -33,6 +33,6 @@ class Alunoservice {
             this.add(new AlunoModel(aluno))
         })
     }
-    
+
 
 }

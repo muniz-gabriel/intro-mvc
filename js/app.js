@@ -1,11 +1,18 @@
+const materiaService = new MateriaService()
+let materias = materiaService.getAll()
+if (materias.length === 0) {
+    materiaService.add(new MateriaModel({ nome: 'Back-End 1' }))
+    materiaService.add(new MateriaModel({ nome: 'Front-End 2' }))
+    materiaService.add(new MateriaModel({ nome: 'Banco de Dados' }))
+    materiaService.add(new MateriaModel({ nome: 'Ferramentas Web' }))
+}
+
 const alunoService = new Alunoservice()
 
-    alunos.forEach(aluno => {
-        alunoService.add(new AlunoModel(aluno))
-})
-
-const alunoView = new AlunoView(document.querySelector('[data-table="alunos"]'))
-const alunoController = new AlunoController(alunoService, alunoView)
+const alunoView = new AlunoView(
+document.querySelector('[data-table="alunos"]'),
+materiaService.getAll()
+)
 
 document.querySelector('from').addEventListener('submit', function (event) {
     event.preventDefault()
