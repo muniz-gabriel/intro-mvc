@@ -14,8 +14,8 @@ document.querySelector('[data-table="alunos"]'),
 materiaService.getAll()
 )
 
-document.querySelector('from').addEventListener('submit', function (event) {
+document.querySelector('form').addEventListener('submit', function (event) {
     event.preventDefault()
     const nome = document.getElementById('first_name').value;
-    alunoController.add(nome);
+    alunoController.add({ nome });
 })

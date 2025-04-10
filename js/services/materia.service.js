@@ -40,4 +40,4 @@ class MateriaService {
             this.add(new MateriaModel(materia))
         })
     }
-};
+}

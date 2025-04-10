@@ -1,6 +1,7 @@
 class Alunoservice {
     constructor() {
         this.alunos = [];
+        this.updateListAlunosFromLocalStorage();
     }
 
     add(aluno) {
@@ -8,6 +9,7 @@ class Alunoservice {
             throw new Error('O aluno deve ser uma instância de AlunoModel')
         };
         this.alunos.push(aluno);
+        this.updateLocalStorage();
     };
 
     update(aluno) {
