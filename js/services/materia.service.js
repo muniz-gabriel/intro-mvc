@@ -1,4 +1,6 @@
-class MateriaService {
+import { MateriaModel } from '../models/materia.model.js'
+
+export class MateriaService {
     constructor() {
         this.materias = []
         this.updateListMaterialsFromLocalStorage()

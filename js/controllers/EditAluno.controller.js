@@ -1,3 +1,5 @@
+import { AlunoModel } from "../models/aluno.model.js" 
+
 class EditAlunoController {
     constructor(aluno, view, service) {
         this.aluno = aluno

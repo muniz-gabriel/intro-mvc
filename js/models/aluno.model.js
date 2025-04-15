@@ -1,3 +1,5 @@
+import { average } from '../calc.js'
+
 class AlunoModel {
     constructor({nome, _id, notas} = { notas: {} }) {
         this.nome = nome

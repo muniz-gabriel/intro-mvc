@@ -1,3 +1,5 @@
+import { AlunoModel } from "../models/aluno.model.js"
+
 class Alunoservice {
     constructor() {
         this.alunos = [];
@@ -26,6 +28,13 @@ class Alunoservice {
     searchById(id) {
         return this.alunos.find(aluno => aluno._id == id)
     };
+
+    search(nome) {
+        return this.alunos.filter(aluno =>
+            aluno.nome
+            .toLowerCase()
+            .includes(nome.toLowerCase()))
+    }   
 
     updateLocalStorage() {
         let alunos = JSON.stringify(this.alunos)
